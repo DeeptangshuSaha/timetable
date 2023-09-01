@@ -1,0 +1,45 @@
+body {
+  background-color: #393e46a0;
+}
+
+.table {
+  background-color: #222831;
+  width: fit-content;
+  margin: auto;
+}
+
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  color: #f2f2f2;
+  line-height: 30px;
+  letter-spacing: 4px;
+  font-weight: 100;
+}
+
+tr {
+  background-color: #393e46;
+}
+
+tr:nth-child(1) {
+  background-color: #f96d00;
+}
+
+
+
+.first-color { 
+	background: #222831; 
+}
+	
+.second-color { 
+	background: #393e46; 
+}
+
+.third-color { 
+	background: #f96d00; 
+}
+
+.fourth-color { 
+	background: #f2f2f2; 
+}
