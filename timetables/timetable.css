@@ -98,13 +98,19 @@ tr:nth-child(1) {
     border-radius: 5px;
     background-color: #222831;
     color: #f2f2f2;
-    /* border: 2px solid #f2f2f2; */
-    /* box-shadow: 2px 2px 10px #fffefe; */
   }
 
   .sec-line {
     display: flex;
     justify-content: space-between;
+  }
+
+  .progressbar {
+    display: none;
+  }
+
+  span {
+    padding: 5px;
   }
 }
 
