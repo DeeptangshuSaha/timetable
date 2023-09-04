@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIML-A</title>
   <link rel="stylesheet" type="text/css" href="./timetable.css">
+  <script type="text/javascript" src="./switch.js"></script>
 </head>
+
 <body>
-  <class="table">
+  <div class="table desktop-view">
     <table>
       <tr>
         <th colspan="8" style="text-align: left;">CSE(AIML) A</th>
@@ -74,5 +77,415 @@
       </tr>
     </table>
   </div>
+  <div class="mobile-view">
+    <div class="days">
+      <form>
+        <div class="selector">
+          <input type="radio" name="day" value="Monday" id="day1" onclick="showtimetable('day',5)" checked /><label
+            for="day1">Mon</label>
+          <input type="radio" name="day" value="Tuesday" id="day2" onclick="showtimetable('day',5)" /><label
+            for="day2">Tue</label>
+          <input type="radio" name="day" value="Wednesday" id="day3" onclick="showtimetable('day',5)" /><label
+            for="day3">Wed</label>
+          <input type="radio" name="day" value="Thursday" id="day4" onclick="showtimetable('day',5)" /><label
+            for="day4">Thu</label>
+          <input type="radio" name="day" value="Friday" id="day5" onclick="showtimetable('day',5)" /><label
+            for="day5">Fri</label>
+        </div>
+      </form>
+      <div class="content">
+        <div id="day1Div" style="display:block;">
+          <div class="periods">
+            <div class="period1 perDesign">
+              <span>Formal Language & Automata Theory</span>
+              <div class="sec-line">
+                <span>9:30am - 10:25am</span>
+                <span>B1 LG 3.5</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period2 perDesign">
+              <span>Formal Language & Automata Theory</span>
+              <div class="sec-line">
+                <span>10:30am - 11:25am</span>
+                <span>B1 LG 3.5</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period3 perDesign">
+              <span>Software Engineering Lab</span>
+              <div class="sec-line">
+                <span>11:30am - 12:25pm</span>
+                <span>B1 CCFL-1</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period4 perDesign">
+              <span>Lunch</span>
+              <div class="sec-line">
+                <span>12:25pm - 01:20pm</span>
+                <!-- <span>B1 LG 3.5</span> -->
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period5 perDesign">
+              <span>Software Engineering Lab</span>
+              <div class="sec-line">
+                <span>01:20pm - 02:15pm</span>
+                <span>B1 CCFL-1</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period6 perDesign">
+              <span>ESP-V</span>
+              <div class="sec-line">
+                <span>02:20pm - 03:15pm</span>
+                <span>B1 LG 3.5</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period7 perDesign">
+              <span>Image Processing</span>
+              <div class="sec-line">
+                <span>03:20pm - 04:15pm</span>
+                <span>B1 LG 3.5</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ID="day2Div" style="display:none;">
+          <div class="periods">
+            <div class="period1 perDesign">
+              <span>Database Management Systems Lab</span>
+              <div class="sec-line">
+                <span>9:30am - 10:25am</span>
+                <span>B1 LG 1.6</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period2 perDesign">
+              <span>Database Management Systems Lab</span>
+              <div class="sec-line">
+                <span>10:30am - 11:25am</span>
+                <span>B1 LG 1.6</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period3 perDesign">
+              <span>Signals & Systems</span>
+              <div class="sec-line">
+                <span>11:30am - 12:25pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period4 perDesign">
+              <span>Lunch</span>
+              <div class="sec-line">
+                <span>12:25pm - 01:20pm</span>
+                <!-- <span>B1 LG 3.5</span> -->
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period5 perDesign">
+              <span>Database Management Systems</span>
+              <div class="sec-line">
+                <span>01:20pm - 02:15pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period6 perDesign">
+              <span>Principles of Management</span>
+              <div class="sec-line">
+                <span>02:20pm - 03:15pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period7 perDesign">
+              <span>Software Engineering</span>
+              <div class="sec-line">
+                <span>03:20pm - 04:15pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ID="day3Div" style="display:none;">
+          <div class="periods">
+            <div class="period1 perDesign">
+              <span>Pre-Placement Training</span>
+              <div class="sec-line">
+                <span>9:30am - 10:25am</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period2 perDesign">
+              <span>Pre-Placement Training</span>
+              <div class="sec-line">
+                <span>10:30am - 11:25am</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period3 perDesign">
+              <span>SDP-V</span>
+              <div class="sec-line">
+                <span>11:30am - 12:25pm</span>
+                <span>B3 LG 3.4</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period4 perDesign">
+              <span>Lunch</span>
+              <div class="sec-line">
+                <span>12:25pm - 01:20pm</span>
+                <!-- <span>B1 LG 3.5</span> -->
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period5 perDesign">
+              <span>SDP-V</span>
+              <div class="sec-line">
+                <span>01:20pm - 02:15pm</span>
+                <span>B3 LG 3.4</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period6 perDesign">
+              <span>Constitution of India</span>
+              <div class="sec-line">
+                <span>02:20pm - 03:15pm</span>
+                <span>B3 LG 3.4</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period7 perDesign">
+              <span>Constitution of India</span>
+              <div class="sec-line">
+                <span>03:20pm - 04:15pm</span>
+                <span>B3 LG 3.4</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ID="day4Div" style="display:none;">
+          <div class="periods">
+            <div class="period1 perDesign">
+              <span>Software Engineering</span>
+              <div class="sec-line">
+                <span>9:30am - 10:25am</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period2 perDesign">
+              <span>Image Processing</span>
+              <div class="sec-line">
+                <span>10:30am - 11:25am</span>
+                <span>B1 LG 3.4</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period3 perDesign">
+              <span>Image Processing</span>
+              <div class="sec-line">
+                <span>11:30am - 12:25pm</span>
+                <span>B1 LG 3.4</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period4 perDesign">
+              <span>Lunch</span>
+              <div class="sec-line">
+                <span>12:25pm - 01:20pm</span>
+                <!-- <span>B1 LG 3.5</span> -->
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period5 perDesign">
+              <span>Formal Language & Automata Theory</span>
+              <div class="sec-line">
+                <span>01:20pm - 02:15pm</span>
+                <span>B1 LG 3.5</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period6 perDesign">
+              <span>Database Management Systems</span>
+              <div class="sec-line">
+                <span>02:20pm - 03:15pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period7 perDesign">
+              <span>Database Management Systems</span>
+              <div class="sec-line">
+                <span>03:20pm - 04:15pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ID="day5Div" style="display:none;">
+          <div class="periods">
+            <div class="period1 perDesign">
+              <span>Software Engineering</span>
+              <div class="sec-line">
+                <span>9:30am - 10:25am</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period2 perDesign">
+              <span>Signals & Systems</span>
+              <div class="sec-line">
+                <span>10:30am - 11:25am</span>
+                <span>B3 Seminar Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period3 perDesign">
+              <span>Formal Language & Automata Theory</span>
+              <div class="sec-line">
+                <span>11:30am - 12:25pm</span>
+                <span>B1 LG 3.5</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period4 perDesign">
+              <span>Lunch</span>
+              <div class="sec-line">
+                <span>12:25pm - 01:20pm</span>
+                <!-- <span>B1 LG 3.5</span> -->
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period5 perDesign">
+              <span>Database Management Systems</span>
+              <div class="sec-line">
+                <span>01:20pm - 02:15pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period6 perDesign">
+              <span>Principals of Management</span>
+              <div class="sec-line">
+                <span>02:20pm - 03:15pm</span>
+                <span>B1 AV Hall</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+            <div class="period7 perDesign">
+              <span>ESP-V</span>
+              <div class="sec-line">
+                <span>03:20pm - 04:15pm</span>
+                <span>B1 LG 3.5</span>
+              </div>
+              <div class="progressbar">
+                Hello
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
+
+<!-- <script>
+  function showtimetable(IdBaseName, NumberOfButtons) {
+    for (x = 1; x <= NumberOfButtons; x++) {
+      CheckThisButton = IdBaseName + x;
+      ThisDiv = IdBaseName + x + 'Div';
+      if (document.getElementById(CheckThisButton).checked) {
+        document.getElementById(ThisDiv).style.display = "block";
+      }
+      else {
+        document.getElementById(ThisDiv).style.display = "none";
+      }
+    }
+    return false;
+  }
+</script> -->
+
+
+
 </html>
